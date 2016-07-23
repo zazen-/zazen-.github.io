@@ -1,0 +1,647 @@
+@charset "utf-8";
+/**
+* Project: ООО «Ecostyle»
+* Author: Yaroslav Voronoy
+* Email: y.voronoy@gmail.com
+*/
+
+/* Документация CSS
+   ================================================
+   1. Global Settings 
+	 2. Headings
+	 3. Common Formatting
+	 4. Links
+	 5. Forms
+	 6. Tables
+	 7. Global Classes 
+	 8. Layouts
+	 9. Misc	 */
+
+/* 1. Global Settings 
+   ================================================*/
+ 
+html, body {
+border:0;
+margin:0;
+padding:0;
+}
+ 
+body {
+font:12px/1.4 Verdana, Helvetica, sans-serif;
+color:#5b5858;
+background:url('images/bg.jpg') no-repeat top center #0f0703;
+}
+ 
+/* 2. Headings 
+   ==================================================*/
+h1, h2, h3, h4, h5, h6 {
+margin:0;
+padding:0;
+font-weight:normal;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+color:#477075;
+}
+ 
+h1 {
+  padding:20px 0 18px 0;
+  font-size:24px;
+  font-weight:bold;
+}
+ 
+h2 {
+  padding:0 0 24px 0;
+  font-size:30px;
+}
+h2 a{
+    text-decoration: none !important;
+    color:#477077 !important;
+}
+h3 {
+font-weight:bold;
+font-size:20px;
+}
+h3.seriesName{padding-bottom:15px;}
+h4 {
+font-weight:bold;
+font-size:14px;
+margin-bottom:8px;
+}
+/* 3. Common Formatting 
+   ===================================================*/
+p, ul, ol {
+margin:0;
+padding:0 0 18px 0;
+}
+ 
+ul, ol {
+padding:0 0 15px 30px;
+font-size:12px;
+list-style-type:square;
+}
+ 
+blockquote {
+margin:1.25em;
+padding:1.25em 1.25em 0 1.25em;
+}
+ 
+small {
+font-size:0.85em;
+}
+ 
+img {
+border:0;
+}
+ 
+sup {
+position:relative;
+bottom:0.3em;
+vertical-align:baseline;
+}
+ 
+sub {
+position:relative;
+bottom:-0.2em;
+vertical-align:baseline;
+}
+ 
+acronym, abbr {
+cursor:help;
+letter-spacing:0px;
+border-bottom:1px dashed;
+}
+ 
+/* 4. Links 
+   ============================================= */
+a,
+a:link,
+a:visited,
+a:hover {
+text-decoration:underline;
+color:#0105f8;
+}
+a:hover{
+ color:#004f93;
+ text-decoration:underline;
+}
+a:visited{color:#0105f8;}
+ 
+/* 5. Forms 
+   ============================================= */
+form {
+margin:0;
+padding:0;
+display:inline;
+}
+ 
+input, select, textarea {
+font:1em Arial, Helvetica, sans-serif;
+}
+ 
+textarea {
+width:100%;
+line-height:1.25;
+}
+ 
+label {
+
+}
+
+ 
+/* 6. Tables 
+	 ============================================*/
+table {
+border:0;
+margin:0;
+padding:0;
+border-collapse:collapse;
+}
+ 
+table tr td {
+padding:5px;
+vertical-align:top;
+}
+hr{clear:both; margin:0px; padding:0px; color:#BEBEBE;}
+ 
+/* 7. Global Classes 
+	 ================================================= */
+.clear         { clear:both; height:1px; font-size:1px;}
+div.clear      { font-size:0; height:0px;}
+.float-left    { float:left; }
+.float-right   { float:right; }
+
+.hide          { display:none;}
+.block         { display:block;}
+.inline        { display:inline;}
+ 
+.text-left     { text-align:left; }
+.text-right    { text-align:right; }
+.text-center   { text-align:center; }
+.text-justify  { text-align:justify; }
+ 
+.bold          { font-weight:bold; }
+.italic        { font-style:italic; }
+.underline     { border-bottom:1px solid; }
+.highlight     { background:#ffc; }
+ 
+.wrap          { width:1004px;margin:0 auto; }
+ 
+.img-left      { float:left;margin:4px 10px 4px 0; }
+.img-right     { float:right;margin:4px 0 4px 10px; }
+ 
+.nopadding     { padding:0; }
+.noindent      { margin-left:0;padding-left:0; }
+.nobullet      { list-style:none;list-style-image:none; }
+.menu		   { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; }
+a.seolinks:hover, a.seolinks:visited, a.seolinks:active, a.seolinks:link     {color:#484848;}
+.description{    
+	color: #AAAAAA;
+    font-size: 11px;
+    font-style: italic;
+}
+.zend_form input, .zend_form textarea{border:1px solid #ddd;}
+.zend_form label{
+	font-weight:bold;
+}
+.zend_form textarea:focus{
+    border: 1px solid #ff7c4b;
+    background: #fffbf0;
+}
+.zend_form input:focus{
+    border: 1px solid #ff7c4b;
+    background: #fffbf0;
+}
+.zend_form dt{
+    margin-bottom: 10px;
+}
+.inlineList{
+ 	list-style:none;
+}
+.inlineList li{
+ 	float:left;
+}
+
+/** Main Blocks **/
+#container{
+  width:980px;
+  margin:0 auto;
+  position:relative;
+}
+#header{
+	height:110px;
+}
+
+#header .vcard{
+	float:right;
+	padding-top:25px;
+	width:230px;
+	color:#fff;
+}
+#header .vcard p{
+	padding:0px;
+}
+  
+#main{
+ 	background:#fff;
+  padding:20px;
+  padding-top:10px;
+}
+  ul#menuCategories{
+    float:left;
+    list-style:none outside none;
+    margin-bottom:11px;
+    padding:0;
+    width:940px;
+  }
+  ul#menuCategories li{
+    float:left;
+    margin-right:20px;
+  }
+  ul#menuCategories li a{
+   	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    font-style:normal;
+    text-transform:uppercase;
+    color:#477077;
+  }
+  #content{
+  	clear:both;
+  }
+  	
+    #news{
+     	width:600px;
+      float:left;
+      border-right:1px dotted #8a8a8a;
+      padding-right:19px;
+    }
+    #news .news{
+      padding-bottom:10px;
+      margin-bottom:20px;
+    }
+    #news .news.first{border-bottom:1px dotted #8a8a8a;}
+    	#news span.published{
+      	font-size:10px;
+	      color:#b9b8b8;
+  		}
+      #news h3{
+       	padding-bottom:18px;
+      }
+      #news h3 a{
+       	font-size:12px;
+        color:#0105f8;
+        font-family:Verdana, Geneva, sans-serif;
+        font-weight:normal;
+      }
+    #products{
+     	width:300px;
+      float:right;
+      padding-left:20px;
+      padding-bottom:20px;
+    }
+    #about{
+     	clear:both;
+      padding-bottom:40px;
+      padding-top:30px;
+    }
+    
+    /* level features */
+    #downloadLink{
+    	position:absolute;
+			left:640px;
+    }
+    #featuresTable{
+     	clear:both;
+      margin:10px 0px;
+    }
+    #featuresTable td{
+     	padding:0px;
+    }
+    #featuresTable tr{
+
+    }
+    td#descriptionSeries{
+      width:400px;
+      border-right:1px dotted #000;
+      padding-bottom:10px;
+      padding-right:10px;
+    }
+    td#featuresSeries{
+      width:400px;
+      padding-left:20px;
+      padding-bottom:20px;
+    }
+    
+    #modulesMenu{
+     	height:30px;
+      margin-bottom:10px;
+    }
+    #modulesMenu a{
+     	font-weight:bold;
+      color:#808081;
+    }
+    #modulesMenu a.active{
+     	font-weight:bold;
+      color:#0105F8;
+    }    
+    #modulesMenu ul{
+     	padding:0px;
+    }
+    #modulesMenu ul li{
+     	margin-right: 20px;
+    }
+  
+#footer{
+  background:#477076;
+  color:#aaa5a5;
+  padding:15px 20px 15px 20px;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:12px;
+  clear:both;
+}
+#footer p{
+ 	padding:0px;
+}
+#footer a{
+ 	color:#aaa5a5;
+ 	font-size:11px;
+}
+  
+/** Inner Page **/
+#breadcrumbs{
+  background-color:#e5e5e5;
+  padding:10px 10px;
+  font-size:10px;
+  color:#808080;
+  font-style:italic;
+  margin-bottom:15px;
+  margin-top: -20px;
+}
+#breadcrumbs a{
+ 	color:#808080;
+  font-style:normal;
+}
+
+.seriesName{
+ 	clear:both;
+}
+ul.series{
+ list-style:none;
+ padding:0px;
+}
+  ul.series li{
+    width:200px;
+    height:191px;
+    float:left;
+    padding-right:46px;
+    padding-bottom:30px;
+  }
+
+  ul.series li.last{
+  	padding-right:0px;
+  }
+  ul.series li h3{
+   	text-align:center;
+    font-size:12px;
+  }
+  ul.series li h3 a{
+   	color:#4f4c4c;
+  }
+  ul.series li {text-align: center;}
+  ul.series li img{ width:200px; overflow: hidden;}
+.descriptionText h3, h3.description{
+	font-size:12px;
+  color:#5B5858;
+  padding:18px 0px 18px 0px;
+  font-family:Verdana, Geneva, sans-serif
+}
+/* Tabs */
+#tabs{
+ 	padding:0;
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size:14px;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:#808079;
+}
+#tabs a{
+ 	color:#808080;
+  text-decoration:none;
+}
+#tabs li{
+ 	margin: 0;
+	border: 0 none;
+	padding: 5px 10px 10px 10px;
+	float: left;
+	display: inline;
+	list-style: none;
+	position: relative;
+	height: 15px;
+ 	margin-right:15px;
+  margin-bottom:10px
+}
+#tabs li.active{
+	background:#808080;
+  color:#fff;
+}
+#tabs li.active a{
+ 	color:#fff;
+}
+#tabs a:hover{
+ 	text-decoration:underline;
+}
+
+/* Main Menu */
+
+
+ul#menuCategories li {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	float: left;
+	display: inline;
+	list-style: none;
+	position: relative;
+	height: 29px;
+        z-index:999;
+}
+
+ul#menuCategories ul {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	width: 160px;
+	list-style: none;
+	display: none;
+	position: absolute;
+	top: 29px;
+	left: 0;
+ z-index:999;	
+}
+
+ul#menuCategories ul:after {
+	clear: both;
+	display: block;
+	font: 1px/0px serif;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+}
+
+ul#menuCategories ul li {
+	width: 180px;
+	float: left;
+	display: block !important;
+	display: inline;
+}
+
+ul#menuCategories a {
+	border: 0px;
+	padding: 0 12px;
+	float: none !important;
+	float: left;
+	display: block;
+	color: #fff684;
+	font: bold 14px/29px Arial, Helvetica, sans-serif;
+  font-weight:normal;
+	text-decoration: none;
+	height: auto !important;
+	height: 1%;
+}
+ul#menuCategories a.last{padding-right:0px;}
+ul#menuCategories #firstmenu a{padding-left:30px;}
+ul#menuCategories #lastmenu a{border-right:0px;}
+
+/* Main Menu Hover */
+ul#menuCategories a:hover,
+ul#menuCategories li:hover a,
+ul#menuCategories li.iehover a {
+	background: #477076;
+	color: #FFFFFF;
+ 
+}
+
+/* Second Menu */
+ul#menuCategories li:hover li a,
+ul#menuCategories li.iehover li a {
+	border-top: 1px solid #FFFFFF;
+	float: none;
+	background: #808080;
+	color: #FFFFFF;
+}
+
+/* Second Menu Hover */
+ul#menuCategories li:hover li a:hover,
+ul#menuCategories li:hover li:hover a,
+ul#menuCategories li.iehover li a:hover,
+ul#menuCategories li.iehover li.iehover a {
+	border-top: 1px solid #FFFFFF;
+	background: #477076;
+	color: #FFFFFF;
+}
+
+ul#menuCategories ul ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 160px;
+}
+
+ul#menuCategories li:hover ul ul,
+ul#menuCategories li.iehover ul ul {
+	display: none;
+}
+
+ul#menuCategories li:hover ul,
+ul#menuCategories ul li:hover ul,
+ul#menuCategories li.iehover ul,
+ul#menuCategories ul li.iehover ul {
+	display: block;
+}
+  
+  
+  
+  /* s3slider */
+#s3slider {
+
+  height:375px;
+  overflow:hidden;
+  position:relative;
+  width:940px;
+  padding:0px;
+  margin-bottom:30px;
+}
+
+#s3sliderContent {
+  list-style-type:none !important;
+  margin:0;
+  position:absolute;
+  top:0;
+  width:940px;
+  padding:0px;
+  height:375px;
+}
+#s3sliderContent span h3{
+	color:#fff;
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size:18px;
+  padding-bottom:40px;
+  text-align:center;
+}
+#s3sliderContent span p{
+ 	font-size:11px;
+}
+
+.s3sliderImage {
+   float: left; /* important */
+   position: relative; /* important */
+   display: none; /* important */
+}
+
+.s3sliderImage span {
+   position: absolute; /* important */
+   right: 0;
+   padding: 77px 20px 20px 20px;
+   background-color: #000;
+   filter: alpha(opacity=70); /* here you can set the opacity of box with text */
+   /* -moz-opacity: 0.7; /* here you can set the opacity of box with text */
+   /*-khtml-opacity: 0.7; /* here you can set the opacity of box with text */
+   opacity: 0.7; /* here you can set the opacity of box with text */
+   color: #fff;
+   display: none; /* important */
+   top: 0;
+   width:300px;
+   height:278px;
+
+   /*
+       if you put
+       top: 0; -> the box with text will be shown at the top of the image
+       if you put
+       bottom: 0; -> the box with text will be shown at the bottom of the image
+   */
+}
+
+.clear {
+   clear: both;
+}  
+div#button{
+  background:url(images/slideshow_button.png) no-repeat left top;
+  width:169px;
+  height:17px;
+  float:right;
+  margin-top:10px;  
+  padding:7px 10px 10px 10px;
+  text-align:center;
+}
+div#button a{
+ color:#fff;
+ text-decoration:none;
+}
+
+#fancybox-title{
+    text-align: left;
+}
+#fancybox-title-inside p{
+    padding:0px;
+    font-size: 10px;
+    color:#aaa;
+}
